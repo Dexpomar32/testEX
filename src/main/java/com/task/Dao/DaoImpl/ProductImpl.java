@@ -44,7 +44,7 @@ public class ProductImpl implements DaoProduct {
             try {
                 product.setName(entity.getName());
                 product.setPrice(entity.getPrice());
-                product.setCategoryId(entity.getCategoryId());
+                product.setCategory(entity.getCategory());
                 session.merge(product);
                 session.getTransaction().commit();
             } catch (HibernateException e) {
